@@ -267,10 +267,16 @@ export default function Home() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+      const data = await res.json();
 
       if (!res.ok) throw new Error();
 
-      setStatus(t.booking.success);
+      if (data.lineSent === false) {
+        setStatus(`${t.booking.success} แต่ LINE ยังไม่ส่ง: ${data.lineError}`);
+      } else {
+        setStatus(t.booking.success);
+      }
+
       setForm({
         name: "",
         phone: "",
