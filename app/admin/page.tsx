@@ -83,7 +83,20 @@ export default function AdminPage() {
   }
 
   useEffect(() => {
-    if (isAuthenticated) fetchBookings();
+    if (!isAuthenticated) return;
+
+    supabase
+      .from("bookings")
+      .select("*")
+      .order("created_at", { ascending: false })
+      .then(({ data, error }) => {
+        if (error) {
+          console.log("SUPABASE ERROR:", error);
+          return;
+        }
+
+        setBookings((data as Booking[]) || []);
+      });
   }, [isAuthenticated]);
 
   if (!isAuthenticated) {
