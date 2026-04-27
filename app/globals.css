@@ -5,10 +5,9 @@
   --foreground: #17352f;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-baan-apa);
+:root {
+  --background: #fbf7ef;
+  --foreground: #17352f;
 }
 
 * {
