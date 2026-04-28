@@ -62,6 +62,9 @@ const homeCopy = {
     address: "Kanchanaburi, Thailand",
     phone: "080-591-9199",
     directions: "Get Directions",
+    videoTitle: "สัมผัสบรรยากาศบ้านอาปารีสอร์ท",
+    videoBody:
+      "ชมบรรยากาศจริงของรีสอร์ทในมุมมองแนวตั้ง ก่อนเริ่มต้นทริปพักผ่อนใกล้ธรรมชาติ",
   },
   en: {
     heroSubtitle: "Nature Retreat in Kanchanaburi",
@@ -113,6 +116,9 @@ const homeCopy = {
     address: "Kanchanaburi, Thailand",
     phone: "080-591-9199",
     directions: "Get Directions",
+    videoTitle: "Experience the atmosphere of Baan APA Resort",
+    videoBody:
+      "Step into the resort through a vertical glimpse of calm nature, warm spaces, and slow retreat moments.",
   },
 } as const;
 
@@ -123,6 +129,51 @@ export default function HomePage() {
   return (
     <PublicLayout>
       <main className="bg-[#f7efe2] text-[#17352f]">
+        <section className="bg-[#f7efe2] px-5 pb-20 pt-32 text-[#17352f] sm:pt-36 lg:pb-24">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.82fr_1fr] lg:items-center">
+            <div className="order-1 mx-auto w-full max-w-sm lg:mx-0">
+              <div className="overflow-hidden rounded-[2rem] bg-[#17352f] p-2 shadow-2xl shadow-[#4a2f1f]/20">
+                <video
+                  src="/videos/baan-apa-vertical.mp4"
+                  className="aspect-[9/16] w-full rounded-[1.5rem] object-cover"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                />
+              </div>
+            </div>
+
+            <div className="order-2 text-center lg:text-left">
+              <p className="mb-5 text-sm font-bold uppercase tracking-[0.24em] text-[#b6782e]">
+                Baan APA Erawan Resort
+              </p>
+              <h2 className="text-4xl font-bold leading-tight text-[#17352f] sm:text-5xl">
+                {copy.videoTitle}
+              </h2>
+              <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#52635d] lg:mx-0">
+                {copy.videoBody}
+              </p>
+              <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+                <Link
+                  href="/booking"
+                  className="rounded-md bg-[#17352f] px-7 py-4 text-center font-bold text-white shadow-lg shadow-[#4a2f1f]/10 transition hover:-translate-y-0.5 hover:bg-[#25564c]"
+                >
+                  {copy.book}
+                </Link>
+                <a
+                  href={lineOaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md border border-[#17352f] px-7 py-4 text-center font-bold text-[#17352f] transition hover:-translate-y-0.5 hover:bg-[#17352f] hover:text-white"
+                >
+                  {copy.line}
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="relative min-h-screen overflow-hidden text-white">
           <Image
             src={heroImage}
