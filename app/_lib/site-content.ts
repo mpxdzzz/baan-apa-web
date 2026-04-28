@@ -247,6 +247,146 @@ export const galleryImages = [
     altTh: "วิวสงบภายในรีสอร์ท",
     altEn: "Calm view inside the resort",
   },
+  {
+    src: "/images/1718684684675_0.jpg",
+    altTh: "บรรยากาศบ้านอาปารีสอร์ท",
+    altEn: "Baan APA Resort atmosphere",
+  },
+  {
+    src: "/images/1718684688017_0.jpg",
+    altTh: "มุมพักผ่อนภายในรีสอร์ท",
+    altEn: "Relaxing corner inside the resort",
+  },
+  {
+    src: "/images/1718684689787_0.jpg",
+    altTh: "ภาพบรรยากาศธรรมชาติของบ้านอาปา",
+    altEn: "Natural atmosphere at Baan APA",
+  },
+  {
+    src: "/images/1718684691967_0.jpg",
+    altTh: "พื้นที่พักผ่อนบรรยากาศสงบ",
+    altEn: "Peaceful resort resting area",
+  },
+  {
+    src: "/images/1718684694624_0.jpg",
+    altTh: "มุมธรรมชาติภายในบ้านอาปา",
+    altEn: "Nature corner inside Baan APA",
+  },
+  {
+    src: "/images/1718684696301_0.jpg",
+    altTh: "รีสอร์ทท่ามกลางบรรยากาศธรรมชาติ",
+    altEn: "Resort surrounded by nature",
+  },
+  {
+    src: "/images/1718684698616_0.jpg",
+    altTh: "ภาพบรรยากาศการพักผ่อน",
+    altEn: "Relaxing resort moment",
+  },
+  {
+    src: "/images/1718684703049_0.jpg",
+    altTh: "มุมสวยงามของบ้านอาปารีสอร์ท",
+    altEn: "Beautiful corner of Baan APA Resort",
+  },
+  {
+    src: "/images/1718684707498_0.jpg",
+    altTh: "พื้นที่รีสอร์ทในบรรยากาศอบอุ่น",
+    altEn: "Warm resort atmosphere",
+  },
+  {
+    src: "/images/1718684711463_0.jpg",
+    altTh: "ธรรมชาติรอบบ้านอาปารีสอร์ท",
+    altEn: "Nature around Baan APA Resort",
+  },
+  {
+    src: "/images/1718684715403_0.jpg",
+    altTh: "บรรยากาศเรียบง่ายและสงบ",
+    altEn: "Simple and peaceful atmosphere",
+  },
+  {
+    src: "/images/1718684720878_0.jpg",
+    altTh: "ภาพบรรยากาศภายในรีสอร์ท",
+    altEn: "Resort interior atmosphere",
+  },
+  {
+    src: "/images/1718684723804_0.jpg",
+    altTh: "มุมพักผ่อนใกล้ธรรมชาติ",
+    altEn: "Relaxing area close to nature",
+  },
+  {
+    src: "/images/1718684727834_0.jpg",
+    altTh: "บรรยากาศบ้านพักและธรรมชาติ",
+    altEn: "House and nature atmosphere",
+  },
+  {
+    src: "/images/1718684730705_0.jpg",
+    altTh: "มุมสงบของบ้านอาปา",
+    altEn: "Calm corner of Baan APA",
+  },
+  {
+    src: "/images/1718684734273_0.jpg",
+    altTh: "ประสบการณ์พักผ่อนที่บ้านอาปา",
+    altEn: "Retreat experience at Baan APA",
+  },
+  {
+    src: "/images/1718684748949_0.jpg",
+    altTh: "บรรยากาศธรรมชาติในกาญจนบุรี",
+    altEn: "Natural Kanchanaburi atmosphere",
+  },
+  {
+    src: "/images/1718684754532_0.jpg",
+    altTh: "ภาพบรรยากาศรีสอร์ทเพิ่มเติม",
+    altEn: "Additional resort atmosphere",
+  },
+  {
+    src: "/images/IMG_8074_0.JPG",
+    altTh: "ภาพบ้านอาปารีสอร์ท",
+    altEn: "Baan APA Resort photo",
+  },
+  {
+    src: "/images/IMG_8091_0.JPG",
+    altTh: "บรรยากาศภายในบ้านอาปา",
+    altEn: "Atmosphere inside Baan APA",
+  },
+  {
+    src: "/images/IMG_8099_0.JPG",
+    altTh: "มุมสวยของรีสอร์ท",
+    altEn: "Beautiful resort view",
+  },
+  {
+    src: "/images/IMG_8184_0.JPG",
+    altTh: "บ้านอาปาในบรรยากาศธรรมชาติ",
+    altEn: "Baan APA in a natural atmosphere",
+  },
+  {
+    src: "/images/IMG_8188_0.JPG",
+    altTh: "พื้นที่พักผ่อนของบ้านอาปา",
+    altEn: "Baan APA relaxation area",
+  },
+  {
+    src: "/images/IMG_8191_0.JPG",
+    altTh: "ภาพรีสอร์ทและธรรมชาติ",
+    altEn: "Resort and nature photo",
+  },
+  {
+    src: "/images/IMG_8194_0.JPG",
+    altTh: "มุมอบอุ่นภายในรีสอร์ท",
+    altEn: "Warm corner inside the resort",
+  },
+  {
+    src: "/images/IMG_8198_0.JPG",
+    altTh: "บรรยากาศพักผ่อนในบ้านอาปา",
+    altEn: "Relaxing atmosphere at Baan APA",
+  },
+  {
+    src: "/images/IMG_8231_0.JPG",
+    altTh: "ภาพเพิ่มเติมของบ้านอาปา",
+    altEn: "Additional Baan APA photo",
+  },
+  {
+    src: "/images/IMG_8232_0.JPG",
+    altTh: "ภาพบรรยากาศบ้านอาปารีสอร์ทเพิ่มเติม",
+    altEn: "Additional Baan APA Resort atmosphere",
+  },
 ] as const;
 
 export const content = {
