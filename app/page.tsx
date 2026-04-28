@@ -65,6 +65,8 @@ const homeCopy = {
     videoTitle: "สัมผัสบรรยากาศบ้านอาปารีสอร์ท",
     videoBody:
       "ชมบรรยากาศจริงของรีสอร์ทในมุมมองแนวตั้ง ก่อนเริ่มต้นทริปพักผ่อนใกล้ธรรมชาติ",
+    story:
+      "“บ้านอาปา” ตั้งตามคำที่เราเรียกคุณพ่อ “อาปา” ผู้เป็นเจ้าของบ้านหลังนี้ และอนุรักษ์จุดเด่นความเป็นบ้านทรงไทยนี้ให้คงอยู่ และเป็น “บ้าน” ที่คนพักอาศัยรู้สึกอยู่แล้วสบาย อบอุ่น ปลอดภัย ท่ามกลางความเป็นธรรมชาติของต้นไม้ ภูเขา ที่เป็นเสน่ห์เฉพาะตัวของกาญจนบุรี",
   },
   en: {
     heroSubtitle: "Nature Retreat in Kanchanaburi",
@@ -119,6 +121,8 @@ const homeCopy = {
     videoTitle: "Experience the atmosphere of Baan APA Resort",
     videoBody:
       "Step into the resort through a vertical glimpse of calm nature, warm spaces, and slow retreat moments.",
+    story:
+      "“Baan APA” is named after the word we use for our father, “Apa,” the owner of this home. We preserve the character of this Thai-style house so it remains a true home where guests feel comfortable, warm, and safe among the trees, mountains, and natural charm of Kanchanaburi.",
   },
 } as const;
 
@@ -153,6 +157,9 @@ export default function HomePage() {
               </h2>
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#52635d] lg:mx-0">
                 {copy.videoBody}
+              </p>
+              <p className="mx-auto mt-5 max-w-2xl text-base leading-8 text-[#5b3a22] lg:mx-0">
+                {copy.story}
               </p>
             </div>
           </div>
