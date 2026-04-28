@@ -154,22 +154,6 @@ export default function HomePage() {
               <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-[#52635d] lg:mx-0">
                 {copy.videoBody}
               </p>
-              <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-                <Link
-                  href="/booking"
-                  className="rounded-md bg-[#17352f] px-7 py-4 text-center font-bold text-white shadow-lg shadow-[#4a2f1f]/10 transition hover:-translate-y-0.5 hover:bg-[#25564c]"
-                >
-                  {copy.book}
-                </Link>
-                <a
-                  href={lineOaUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="rounded-md border border-[#17352f] px-7 py-4 text-center font-bold text-[#17352f] transition hover:-translate-y-0.5 hover:bg-[#17352f] hover:text-white"
-                >
-                  {copy.line}
-                </a>
-              </div>
             </div>
           </div>
         </section>
