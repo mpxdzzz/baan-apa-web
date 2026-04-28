@@ -42,8 +42,8 @@ const homeCopy = {
       },
     ],
     roomsEyebrow: "Stay",
-    roomsTitle: "ห้องพักอบอุ่นสำหรับทุกทริป",
-    roomsBody: "เลือกห้องพักที่เหมาะกับจำนวนผู้เข้าพักและจังหวะการพักผ่อนของคุณ",
+    roomsTitle: "ประเภทห้องพัก",
+    roomsBody: "เลือกประเภทห้องพักที่เหมาะกับจำนวนผู้เข้าพักและจังหวะการพักผ่อนของคุณ",
     viewRooms: "ดูห้องพักทั้งหมด",
     facilitiesEyebrow: "Facilities",
     facilitiesTitle: "ครบสำหรับวันพักผ่อนที่ง่ายและสบาย",
@@ -98,8 +98,8 @@ const homeCopy = {
       },
     ],
     roomsEyebrow: "Stay",
-    roomsTitle: "Warm rooms for every retreat",
-    roomsBody: "Choose the room that fits your group size and the pace of your stay.",
+    roomsTitle: "Room Types",
+    roomsBody: "Choose the room type that fits your group size and the pace of your stay.",
     viewRooms: "View All Rooms",
     facilitiesEyebrow: "Facilities",
     facilitiesTitle: "Everything needed for an effortless stay",
@@ -293,25 +293,16 @@ export default function HomePage() {
                 {copy.viewRooms}
               </Link>
             </div>
-            <div className="grid gap-6 md:grid-cols-2">
-              {roomOptions.map((room) => {
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {roomOptions.slice(0, 3).map((room) => {
                 const translatedRoom = t.rooms.items[room.value];
 
                 return (
                   <article
                     key={room.value}
-                    className="group overflow-hidden rounded-2xl border border-[#e3d0b4] bg-white shadow-xl shadow-[#6f4a2a]/10 transition duration-300 hover:-translate-y-1"
+                    className="group rounded-2xl border border-[#e3d0b4] bg-white p-6 shadow-xl shadow-[#6f4a2a]/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
                   >
-                    <div className="relative h-80 overflow-hidden">
-                      <Image
-                        src={room.image}
-                        alt={translatedRoom.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                        className="object-cover transition duration-700 group-hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-6">
+                    <div>
                       <p className="mb-2 text-sm font-bold text-[#b6782e]">
                         {translatedRoom.type}
                       </p>
@@ -322,6 +313,22 @@ export default function HomePage() {
                         {translatedRoom.desc}
                       </p>
                     </div>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {room.labels.map((label) => (
+                        <span
+                          key={label}
+                          className="rounded-full bg-[#f7efe2] px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#5b3a22]"
+                        >
+                          {label}
+                        </span>
+                      ))}
+                    </div>
+                    <Link
+                      href="/booking"
+                      className="mt-7 inline-block rounded-md bg-[#17352f] px-5 py-3 text-center font-bold text-white hover:bg-[#25564c]"
+                    >
+                      {t.rooms.select}
+                    </Link>
                   </article>
                 );
               })}

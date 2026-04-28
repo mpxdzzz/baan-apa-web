@@ -22,12 +22,32 @@ export const navLinks: Array<{ key: NavKey; href: string }> = [
 
 export const roomOptions = [
   {
-    value: "Basic Room",
-    image: "/images/room1.jpg",
+    value: "ND 1-2",
+    labels: ["Private Stay", "For 2 Guests"],
   },
   {
-    value: "Three-Bedroom Family Room",
-    image: "/images/room3.jpg",
+    value: "ND 3-4",
+    labels: ["Private Stay", "Poolside View", "For 2 Guests"],
+  },
+  {
+    value: "RH 1-10",
+    labels: ["Riverside View", "For 2 Guests", "Dining View"],
+  },
+  {
+    value: "LN 1-2",
+    labels: ["Private Stay", "Near Raft", "For 2 Guests"],
+  },
+  {
+    value: "Thai House",
+    labels: ["Group Stay", "Thai House", "Private Stay"],
+  },
+  {
+    value: "Blue House",
+    labels: ["Group Stay", "Private Stay", "Colorful House"],
+  },
+  {
+    value: "Boat House",
+    labels: ["Water Access", "For 2 Guests", "Boat Stay"],
   },
 ] as const;
 
@@ -265,22 +285,52 @@ export const content = {
     },
     rooms: {
       eyebrow: "ห้องพัก",
-      title: "เลือกห้องพักที่เหมาะกับทริปของคุณ",
+      title: "ประเภทห้องพัก",
       intro:
-        "ห้องพักของบ้านอาปาเน้นความสบาย ความเป็นส่วนตัว และบรรยากาศอบอุ่นสำหรับการพักผ่อนจริง ๆ",
-      select: "จองห้องนี้",
+        "เลือกประเภทห้องพักที่เหมาะกับสไตล์การพักผ่อนของคุณ ตั้งแต่ห้องส่วนตัวสำหรับ 2 คน ไปจนถึงบ้านพักสำหรับกลุ่มหลายคน",
+      select: "สอบถามห้องพัก",
       items: {
-        "Basic Room": {
-          type: "ห้องพักมาตรฐาน",
-          title: "Basic Room",
-          desc: "ห้องพักอบอุ่น เหมาะสำหรับคู่รักหรือผู้เข้าพัก 1-2 ท่าน พร้อมเตียงควีนไซซ์และหน้าต่างรับแสงธรรมชาติ",
-          detail: "เหมาะกับวันพักผ่อนสั้น ๆ หรือทริปคู่รักที่ต้องการความเรียบง่ายและสงบ",
+        "ND 1-2": {
+          type: "Private Stay",
+          title: "ND 1-2",
+          desc: "ห้องน็อคดาวน์แฝด เหมาะสำหรับการพักผ่อนแบบเรียบง่ายและเป็นส่วนตัว",
+          detail: "เหมาะสำหรับผู้เข้าพักที่ต้องการบรรยากาศสงบ เรียบง่าย และพักผ่อนได้อย่างเป็นส่วนตัว",
         },
-        "Three-Bedroom Family Room": {
-          type: "ห้องครอบครัว",
-          title: "Three-Bedroom Family Room",
-          desc: "พื้นที่กว้างสำหรับครอบครัวหรือกลุ่มเพื่อน มี 3 ห้องนอน บรรยากาศเป็นส่วนตัวและพักผ่อนได้สบาย",
-          detail: "เหมาะกับกลุ่มที่ต้องการพื้นที่ส่วนกลางและความเป็นส่วนตัวในทริปเดียวกัน",
+        "ND 3-4": {
+          type: "Poolside Private House",
+          title: "ND 3-4",
+          desc: "ห้องน็อคดาวน์ เป็นบ้าน 1 หลังที่มีความเป็นส่วนตัว เหมาะสำหรับ 2 คน พร้อมวิวสระน้ำและริมน้ำ",
+          detail: "เหมาะสำหรับคู่รักหรือผู้เข้าพัก 2 คนที่ต้องการความเป็นส่วนตัวพร้อมวิวรีสอร์ท",
+        },
+        "RH 1-10": {
+          type: "Riverside View",
+          title: "RH 1-10",
+          desc: "เหมาะสำหรับ 2 คน มีวิวริมน้ำที่สวยงาม และพื้นที่ด้านบนสำหรับรับประทานอาหารพร้อมชมวิวจากมุมสูง",
+          detail: "เหมาะกับการพักผ่อนริมน้ำ พร้อมมุมรับประทานอาหารและชมวิวในบรรยากาศสงบ",
+        },
+        "LN 1-2": {
+          type: "Near Raft",
+          title: "LN 1-2",
+          desc: "ห้องพักที่ตกแต่งไม่เหมือนใคร อยู่ใกล้แพริมน้ำ เหมาะสำหรับประมาณ 2 คน",
+          detail: "เหมาะสำหรับผู้ที่ชอบความแตกต่างและอยากอยู่ใกล้บรรยากาศแพริมน้ำ",
+        },
+        "Thai House": {
+          type: "Group Stay",
+          title: "Thai House",
+          desc: "บ้านทรงไทย เหมาเป็นหลัง มีความสวยงามแบบไทย กว้างขวาง เหมาะสำหรับกลุ่มหลายคน",
+          detail: "เหมาะสำหรับครอบครัวหรือกลุ่มเพื่อนที่ต้องการพื้นที่กว้างและเสน่ห์แบบไทย",
+        },
+        "Blue House": {
+          type: "Private Group House",
+          title: "Blue House",
+          desc: "บ้านสีฟ้า เหมาเป็นหลัง มีสีสันสดใส ความเป็นส่วนตัวสูง และรองรับผู้เข้าพักหลายคน",
+          detail: "เหมาะสำหรับกลุ่มที่ต้องการบ้านพักเป็นหลัง บรรยากาศสดใส และความเป็นส่วนตัว",
+        },
+        "Boat House": {
+          type: "Boat Stay",
+          title: "Boat House",
+          desc: "บ้านบนเรือ ให้ประสบการณ์นอนบนเรือที่สะดวกสบายครบครัน และสามารถเล่นน้ำได้ เหมาะสำหรับ 2 คน",
+          detail: "เหมาะสำหรับผู้ที่อยากได้ประสบการณ์พักบนเรือ พร้อมความสะดวกและกิจกรรมใกล้น้ำ",
         },
       },
     },
@@ -367,22 +417,52 @@ export const content = {
     },
     rooms: {
       eyebrow: "Rooms",
-      title: "Choose the right room for your trip",
+      title: "Room Types",
       intro:
-        "Baan APA rooms focus on comfort, privacy, and a warm atmosphere for guests who want a real rest.",
-      select: "Book This Room",
+        "Explore room types for every style of retreat, from private stays for two to full houses for larger groups.",
+      select: "Ask About This Room",
       items: {
-        "Basic Room": {
-          type: "Standard Room",
-          title: "Basic Room",
-          desc: "A cozy room for one or two guests with a queen bed, natural light, and a relaxed stay atmosphere.",
-          detail: "Ideal for short stays, couples, and guests who want a quiet, simple escape.",
+        "ND 1-2": {
+          type: "Private Stay",
+          title: "ND 1-2",
+          desc: "Twin knockdown rooms designed for a simple and private stay.",
+          detail: "Ideal for guests who want a calm, simple, and private retreat.",
         },
-        "Three-Bedroom Family Room": {
-          type: "Family Room",
-          title: "Three-Bedroom Family Room",
-          desc: "A spacious option for families or groups of friends with three bedrooms, privacy, and plenty of room to rest.",
-          detail: "Ideal for groups that want shared space and private bedrooms in one comfortable stay.",
+        "ND 3-4": {
+          type: "Poolside Private House",
+          title: "ND 3-4",
+          desc: "Private knockdown house suitable for 2 guests, with poolside and riverside views.",
+          detail: "Ideal for couples or two guests who want privacy with resort views.",
+        },
+        "RH 1-10": {
+          type: "Riverside View",
+          title: "RH 1-10",
+          desc: "Ideal for 2 guests, with beautiful riverside views and an upper area for dining while enjoying elevated scenery.",
+          detail: "Ideal for riverside stays with a scenic dining area and calm atmosphere.",
+        },
+        "LN 1-2": {
+          type: "Near Raft",
+          title: "LN 1-2",
+          desc: "Uniquely decorated rooms located near the riverside raft, suitable for around 2 guests.",
+          detail: "Ideal for guests who enjoy unique room character and proximity to the raft area.",
+        },
+        "Thai House": {
+          type: "Group Stay",
+          title: "Thai House",
+          desc: "A full Thai-style house with traditional charm, spacious design, and suitable for larger groups.",
+          detail: "Ideal for families or groups seeking space and Thai-style character.",
+        },
+        "Blue House": {
+          type: "Private Group House",
+          title: "Blue House",
+          desc: "A full blue private house with a vibrant look, high privacy, and space for multiple guests.",
+          detail: "Ideal for groups who want a colorful private house with generous space.",
+        },
+        "Boat House": {
+          type: "Boat Stay",
+          title: "Boat House",
+          desc: "A comfortable boat house stay with full amenities and direct access to water activities, ideal for 2 guests.",
+          detail: "Ideal for guests looking for a memorable boat stay close to water activities.",
         },
       },
     },

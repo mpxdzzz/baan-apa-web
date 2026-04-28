@@ -3,12 +3,11 @@
 import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
-import { ResortImage } from "../_components/ResortImage";
 import { roomOptions } from "../_lib/site-content";
 import { useLanguage } from "../_components/LanguageProvider";
 
 export default function RoomsPage() {
-  const { language, t } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -17,30 +16,20 @@ export default function RoomsPage() {
           eyebrow={t.rooms.eyebrow}
           title={t.rooms.title}
           body={t.rooms.intro}
-          image="/images/room2.jpg"
-          imageAlt={
-            language === "th"
-              ? "ห้องพักบ้านอาปารีสอร์ท"
-              : "Guest room at Baan APA Resort"
-          }
+          noImage
         />
 
-        <section className="bg-white px-5 py-20 text-[#17352f]">
-          <div className="mx-auto grid max-w-7xl gap-8 md:grid-cols-2">
+        <section className="bg-[#fbf7ef] px-5 py-20 text-[#17352f]">
+          <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-2 xl:grid-cols-3">
             {roomOptions.map((room) => {
               const translatedRoom = t.rooms.items[room.value];
 
               return (
                 <article
                   key={room.value}
-                  className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] shadow-sm"
+                  className="flex min-h-full flex-col rounded-2xl border border-[#e2d4bd] bg-white p-6 shadow-xl shadow-[#6f4a2a]/10 transition duration-300 hover:-translate-y-1 hover:shadow-2xl sm:p-8"
                 >
-                  <ResortImage
-                    src={room.image}
-                    alt={translatedRoom.title}
-                    className="h-72 rounded-none"
-                  />
-                  <div className="p-6 sm:p-8">
+                  <div className="flex-1">
                     <p className="mb-2 text-sm font-bold text-[#b6782e]">
                       {translatedRoom.type}
                     </p>
@@ -53,13 +42,25 @@ export default function RoomsPage() {
                     <p className="leading-7 text-[#52635d]">
                       {translatedRoom.detail}
                     </p>
-                    <Link
-                      href="/booking"
-                      className="mt-6 inline-block rounded-md bg-[#17352f] px-5 py-3 font-bold text-white hover:bg-[#25564c]"
-                    >
-                      {t.rooms.select}
-                    </Link>
                   </div>
+
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    {room.labels.map((label) => (
+                      <span
+                        key={label}
+                        className="rounded-full bg-[#f7efe2] px-3 py-1 text-xs font-bold uppercase tracking-[0.12em] text-[#5b3a22]"
+                      >
+                        {label}
+                      </span>
+                    ))}
+                  </div>
+
+                  <Link
+                    href="/booking"
+                    className="mt-7 inline-block rounded-md bg-[#17352f] px-5 py-3 text-center font-bold text-white hover:bg-[#25564c]"
+                  >
+                    {t.rooms.select}
+                  </Link>
                 </article>
               );
             })}

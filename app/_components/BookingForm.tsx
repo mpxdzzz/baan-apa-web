@@ -11,7 +11,7 @@ export function BookingForm() {
     phone: "",
     date: "",
     guests: "",
-    roomType: "Basic Room",
+    roomType: "ND 1-2",
   });
   const [status, setStatus] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -48,7 +48,7 @@ export function BookingForm() {
         phone: "",
         date: "",
         guests: "",
-        roomType: "Basic Room",
+        roomType: "ND 1-2",
       });
     } catch {
       setStatus(t.booking.error);
