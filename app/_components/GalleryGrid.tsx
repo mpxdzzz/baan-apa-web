@@ -12,7 +12,7 @@ export function GalleryGrid() {
 
   return (
     <>
-      <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-4">
+      <div className="grid grid-cols-2 gap-4 sm:gap-7 lg:grid-cols-3 xl:grid-cols-4">
         {galleryImages.map((item, index) => {
           const alt = language === "th" ? item.altTh : item.altEn;
 
@@ -21,20 +21,17 @@ export function GalleryGrid() {
               key={item.src}
               type="button"
               onClick={() => setActiveIndex(index)}
-              className="group overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] text-left shadow-sm"
+              className="group overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] text-left shadow-md shadow-[#17352f]/10 transition duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#17352f]/20"
             >
-              <div className="relative h-44 overflow-hidden sm:h-64 lg:h-72">
+              <div className="relative h-56 overflow-hidden sm:h-80 lg:h-96">
                 <Image
                   src={item.src}
                   alt={alt}
                   fill
                   sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
-                  className="object-cover transition duration-500 group-hover:scale-110"
+                  className="object-cover transition duration-700 ease-out group-hover:scale-110"
                 />
               </div>
-              <span className="block p-3 text-sm font-bold text-[#17352f] sm:p-4 sm:text-base">
-                {alt}
-              </span>
             </button>
           );
         })}
@@ -50,7 +47,7 @@ export function GalleryGrid() {
           <button
             type="button"
             onClick={() => setActiveIndex(null)}
-            className="absolute right-4 top-4 rounded-md bg-white px-4 py-2 text-sm font-bold text-[#17352f]"
+            className="absolute right-4 top-4 rounded-md bg-white/95 px-4 py-2 text-sm font-bold text-[#17352f] shadow-lg"
           >
             Close
           </button>

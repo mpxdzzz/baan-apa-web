@@ -7,6 +7,7 @@ import { ResortImage } from "./_components/ResortImage";
 import {
   galleryImages,
   heroImage,
+  lineOaUrl,
   roomOptions,
 } from "./_lib/site-content";
 import { useLanguage } from "./_components/LanguageProvider";
@@ -17,7 +18,7 @@ export default function HomePage() {
   return (
     <PublicLayout>
       <main>
-        <section className="relative min-h-screen overflow-hidden pt-32 text-white sm:pt-28">
+        <section className="relative min-h-screen overflow-hidden text-white">
           <Image
             src={heroImage}
             alt={
@@ -30,31 +31,33 @@ export default function HomePage() {
             sizes="100vw"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0f2b26]/95 to-[#0f2b26]/45" />
-          <div className="relative mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-center px-5 pb-16">
-            <div className="max-w-3xl">
-              <p className="mb-4 text-sm font-semibold uppercase text-[#f2c36b]">
-                {t.hero.eyebrow}
+          <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(8,23,20,0.74),rgba(8,23,20,0.38)_42%,rgba(8,23,20,0.86)),radial-gradient(circle_at_center,rgba(242,195,107,0.18),transparent_42%)]" />
+          <div className="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-5 py-28 text-center">
+            <div className="max-w-4xl">
+              <p className="mb-5 text-sm font-semibold uppercase tracking-[0.32em] text-[#f2c36b]">
+                Nature Retreat in Kanchanaburi
               </p>
-              <h1 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl md:text-7xl">
-                {t.hero.title}
+              <h1 className="mb-6 text-5xl font-bold leading-tight sm:text-6xl md:text-8xl">
+                Baan APA Erawan Resort
               </h1>
-              <p className="mb-8 max-w-2xl text-base leading-8 text-white/90 sm:text-lg">
-                {t.hero.body}
+              <p className="mx-auto mb-10 max-w-2xl text-lg leading-8 text-white/90 sm:text-xl">
+                Nature Retreat in Kanchanaburi
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col justify-center gap-3 sm:flex-row">
                 <Link
                   href="/booking"
-                  className="rounded-md bg-[#f2c36b] px-6 py-3 font-bold text-[#17352f] hover:bg-[#ffd982]"
+                  className="rounded-md bg-[#f2c36b] px-8 py-4 font-bold text-[#17352f] shadow-lg shadow-black/20 hover:bg-[#ffd982]"
                 >
-                  {t.hero.primary}
+                  Book Now
                 </Link>
-                <Link
-                  href="/rooms"
-                  className="rounded-md border border-white px-6 py-3 font-bold text-white hover:bg-white hover:text-[#17352f]"
+                <a
+                  href={lineOaUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md border border-white/80 px-8 py-4 font-bold text-white shadow-lg shadow-black/20 hover:bg-white hover:text-[#17352f]"
                 >
-                  {t.hero.secondary}
-                </Link>
+                  Contact via LINE
+                </a>
               </div>
             </div>
           </div>
@@ -183,19 +186,16 @@ export default function HomePage() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {galleryImages.slice(0, 8).map((item) => (
-                <figure
+                <div
                   key={item.src}
-                  className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef]"
+                  className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] shadow-sm"
                 >
                   <ResortImage
                     src={item.src}
                     alt={language === "th" ? item.altTh : item.altEn}
                     className="h-72 rounded-none"
                   />
-                  <figcaption className="p-4 font-bold">
-                    {language === "th" ? item.altTh : item.altEn}
-                  </figcaption>
-                </figure>
+                </div>
               ))}
             </div>
           </div>

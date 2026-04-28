@@ -23,7 +23,7 @@ export default function GalleryPage() {
           }
         />
 
-        <section className="bg-white px-5 py-20 text-[#17352f]">
+        <section className="bg-[#fbf7ef] px-5 py-20 text-[#17352f]">
           <div className="mx-auto max-w-7xl">
             <p className="mb-8 max-w-3xl text-lg leading-8 text-[#52635d]">
               {t.gallery.intro}
