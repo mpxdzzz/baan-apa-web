@@ -3,10 +3,12 @@
 import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
+import { ResortImage } from "../_components/ResortImage";
+import { facilityCards } from "../_lib/site-content";
 import { useLanguage } from "../_components/LanguageProvider";
 
 export default function FacilitiesPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -15,18 +17,32 @@ export default function FacilitiesPage() {
           eyebrow={t.facilities.eyebrow}
           title={t.facilities.title}
           body={t.facilities.intro}
-          image="https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1800&q=80"
+          image="/images/pool1.jpg"
+          imageAlt={
+            language === "th"
+              ? "สระว่ายน้ำกลางแจ้งบ้านอาปารีสอร์ท"
+              : "Outdoor pool at Baan APA Resort"
+          }
         />
 
         <section className="bg-[#17352f] px-5 py-20 text-white">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {t.facilities.items.map((item) => (
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {t.facilities.items.map((item, index) => (
                 <div
                   key={item}
-                  className="rounded-lg border border-white/20 bg-white/10 p-6 text-xl font-bold"
+                  className="overflow-hidden rounded-lg border border-white/20 bg-white/10 text-xl font-bold shadow-lg"
                 >
-                  {item}
+                  <ResortImage
+                    src={facilityCards[index].image}
+                    alt={
+                      language === "th"
+                        ? facilityCards[index].altTh
+                        : facilityCards[index].altEn
+                    }
+                    className="h-56 rounded-none"
+                  />
+                  <div className="p-5">{item}</div>
                 </div>
               ))}
             </div>

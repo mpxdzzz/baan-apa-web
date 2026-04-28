@@ -23,32 +23,209 @@ export const navLinks: Array<{ key: NavKey; href: string }> = [
 export const roomOptions = [
   {
     value: "Basic Room",
-    image:
-      "https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/room1.jpg",
   },
   {
     value: "Three-Bedroom Family Room",
-    image:
-      "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=1200&q=80",
+    image: "/images/room3.jpg",
+  },
+] as const;
+
+export const heroImage = "/images/topview1.jpg";
+export const bookingBannerImage = "/images/house1.jpg";
+export const contactImage = "/images/view1.jpg";
+
+export const experienceImages = [
+  {
+    src: "/images/garden.jpg",
+    altTh: "สวนสีเขียวภายในบ้านอาปารีสอร์ท",
+    altEn: "Green garden at Baan APA Resort",
+  },
+  {
+    src: "/images/pool1.jpg",
+    altTh: "สระว่ายน้ำกลางแจ้งของบ้านอาปารีสอร์ท",
+    altEn: "Outdoor swimming pool at Baan APA Resort",
+  },
+  {
+    src: "/images/raft1.jpg",
+    altTh: "แพพักผ่อนริมน้ำของบ้านอาปารีสอร์ท",
+    altEn: "Riverside raft experience at Baan APA Resort",
+  },
+] as const;
+
+export const facilityCards = [
+  {
+    image: "/images/pool2.jpg",
+    altTh: "สระว่ายน้ำกลางแจ้ง",
+    altEn: "Outdoor swimming pool",
+  },
+  {
+    image: "/images/garden.jpg",
+    altTh: "สวนและพื้นที่พักผ่อน",
+    altEn: "Garden and rest areas",
+  },
+  {
+    image: "/images/raft2.jpg",
+    altTh: "แพและกิจกรรมริมน้ำ",
+    altEn: "Raft and riverside activities",
+  },
+  {
+    image: "/images/view3.jpg",
+    altTh: "วิวธรรมชาติรอบรีสอร์ท",
+    altEn: "Natural views around the resort",
+  },
+  {
+    image: "/images/food1.jpg",
+    altTh: "อาหารและมื้อพักผ่อน",
+    altEn: "Food and relaxed meals",
+  },
+  {
+    image: "/images/boat1.jpg",
+    altTh: "กิจกรรมเรือและธรรมชาติ",
+    altEn: "Boat and nature activities",
   },
 ] as const;
 
 export const galleryImages = [
   {
-    key: "resort",
-    src: "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/boat1.jpg",
+    altTh: "เรือและวิวธรรมชาติที่บ้านอาปารีสอร์ท",
+    altEn: "Boat and natural view at Baan APA Resort",
   },
   {
-    key: "pool",
-    src: "https://images.unsplash.com/photo-1572331165267-854da2b10ccc?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/boat2.jpg",
+    altTh: "กิจกรรมเรือท่ามกลางธรรมชาติ",
+    altEn: "Boat activity surrounded by nature",
   },
   {
-    key: "nature",
-    src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/boat3.jpg",
+    altTh: "มุมเรือและบรรยากาศริมน้ำ",
+    altEn: "Boat corner and riverside atmosphere",
   },
   {
-    key: "family",
-    src: "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80",
+    src: "/images/boat4.jpg",
+    altTh: "เรือพักผ่อนในบรรยากาศธรรมชาติ",
+    altEn: "Leisure boat in a natural setting",
+  },
+  {
+    src: "/images/food1.jpg",
+    altTh: "อาหารสำหรับวันพักผ่อน",
+    altEn: "Food for a relaxing stay",
+  },
+  {
+    src: "/images/food2.jpg",
+    altTh: "มื้ออาหารบรรยากาศอบอุ่น",
+    altEn: "Warm and relaxed meal",
+  },
+  {
+    src: "/images/food3.jpg",
+    altTh: "อาหารและประสบการณ์รีสอร์ท",
+    altEn: "Food and resort experience",
+  },
+  {
+    src: "/images/garden.jpg",
+    altTh: "สวนสีเขียวของบ้านอาปารีสอร์ท",
+    altEn: "Green garden at Baan APA Resort",
+  },
+  {
+    src: "/images/house1.jpg",
+    altTh: "บ้านพักภายในรีสอร์ท",
+    altEn: "Resort house exterior",
+  },
+  {
+    src: "/images/house2.jpg",
+    altTh: "มุมบ้านพักบรรยากาศสงบ",
+    altEn: "Peaceful resort house corner",
+  },
+  {
+    src: "/images/house3.jpg",
+    altTh: "บ้านพักท่ามกลางธรรมชาติ",
+    altEn: "Resort house surrounded by nature",
+  },
+  {
+    src: "/images/pool1.jpg",
+    altTh: "สระว่ายน้ำกลางแจ้ง",
+    altEn: "Outdoor swimming pool",
+  },
+  {
+    src: "/images/pool2.jpg",
+    altTh: "พื้นที่สระว่ายน้ำสำหรับพักผ่อน",
+    altEn: "Pool area for relaxation",
+  },
+  {
+    src: "/images/raft1.jpg",
+    altTh: "แพพักผ่อนริมน้ำ",
+    altEn: "Riverside raft for relaxation",
+  },
+  {
+    src: "/images/raft2.jpg",
+    altTh: "แพและบรรยากาศริมน้ำ",
+    altEn: "Raft and riverside atmosphere",
+  },
+  {
+    src: "/images/raft3.jpg",
+    altTh: "กิจกรรมแพในรีสอร์ท",
+    altEn: "Raft activity at the resort",
+  },
+  {
+    src: "/images/room1.jpg",
+    altTh: "ห้องพักบ้านอาปารีสอร์ท",
+    altEn: "Baan APA Resort guest room",
+  },
+  {
+    src: "/images/room2.jpg",
+    altTh: "ห้องพักบรรยากาศอบอุ่น",
+    altEn: "Warm resort guest room",
+  },
+  {
+    src: "/images/room3.jpg",
+    altTh: "ห้องพักสำหรับครอบครัว",
+    altEn: "Family guest room",
+  },
+  {
+    src: "/images/room4.jpg",
+    altTh: "รายละเอียดภายในห้องพัก",
+    altEn: "Guest room interior details",
+  },
+  {
+    src: "/images/topview1.jpg",
+    altTh: "ภาพมุมสูงของบ้านอาปารีสอร์ท",
+    altEn: "Aerial view of Baan APA Resort",
+  },
+  {
+    src: "/images/topview2.jpg",
+    altTh: "ภาพมุมสูงพื้นที่รีสอร์ท",
+    altEn: "Aerial view of the resort grounds",
+  },
+  {
+    src: "/images/view1.jpg",
+    altTh: "วิวธรรมชาติภายในรีสอร์ท",
+    altEn: "Natural view inside the resort",
+  },
+  {
+    src: "/images/view2.jpg",
+    altTh: "บรรยากาศสงบของบ้านอาปา",
+    altEn: "Peaceful atmosphere at Baan APA",
+  },
+  {
+    src: "/images/view3.jpg",
+    altTh: "วิวสีเขียวสำหรับการพักผ่อน",
+    altEn: "Green view for relaxation",
+  },
+  {
+    src: "/images/view4.jpg",
+    altTh: "มุมพักผ่อนใกล้ธรรมชาติ",
+    altEn: "Nature-inspired relaxation corner",
+  },
+  {
+    src: "/images/view5.jpg",
+    altTh: "พื้นที่ธรรมชาติรอบบ้านอาปา",
+    altEn: "Natural area around Baan APA",
+  },
+  {
+    src: "/images/view6.jpg",
+    altTh: "วิวสงบภายในรีสอร์ท",
+    altEn: "Calm view inside the resort",
   },
 ] as const;
 
@@ -125,13 +302,7 @@ export const content = {
       eyebrow: "แกลเลอรี",
       title: "ภาพบรรยากาศบ้านอาปา",
       intro:
-        "ชมภาพบรรยากาศของรีสอร์ท พื้นที่พักผ่อน และมุมธรรมชาติที่ทำให้บ้านอาปาเป็นทริปที่ผ่อนคลาย",
-      items: {
-        resort: "บรรยากาศรีสอร์ท",
-        pool: "สระว่ายน้ำกลางแจ้ง",
-        nature: "พักผ่อนใกล้ธรรมชาติ",
-        family: "พื้นที่สำหรับครอบครัว",
-      },
+        "รูปภาพบรรยากาศภายในบ้านอาปารีสอร์ท ถ่ายทอดความเรียบง่ายของธรรมชาติ ความสงบ และประสบการณ์การพักผ่อนที่แท้จริง",
     },
     booking: {
       eyebrow: "Booking",
@@ -233,13 +404,7 @@ export const content = {
       eyebrow: "Gallery",
       title: "Moments around Baan APA",
       intro:
-        "Explore the resort atmosphere, relaxed corners, and nature-inspired spaces that make a Baan APA stay feel easy and calm.",
-      items: {
-        resort: "Resort atmosphere",
-        pool: "Outdoor pool",
-        nature: "Close to nature",
-        family: "Family spaces",
-      },
+        "Photos from Baan APA Resort showcasing natural beauty, peaceful atmosphere, and authentic retreat experiences",
     },
     booking: {
       eyebrow: "Booking",

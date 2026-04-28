@@ -1,24 +1,38 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { PublicLayout } from "./_components/PublicLayout";
-import { galleryImages, roomOptions } from "./_lib/site-content";
+import { ResortImage } from "./_components/ResortImage";
+import {
+  experienceImages,
+  galleryImages,
+  heroImage,
+  roomOptions,
+} from "./_lib/site-content";
 import { useLanguage } from "./_components/LanguageProvider";
 
 export default function HomePage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
       <main>
-        <section
-          className="relative min-h-screen bg-cover bg-center pt-32 text-white sm:pt-28"
-          style={{
-            backgroundImage:
-              "linear-gradient(90deg, rgba(15, 43, 38, 0.92), rgba(15, 43, 38, 0.5)), url('https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=80')",
-          }}
-        >
-          <div className="mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-center px-5 pb-16">
+        <section className="relative min-h-screen overflow-hidden pt-32 text-white sm:pt-28">
+          <Image
+            src={heroImage}
+            alt={
+              language === "th"
+                ? "ภาพมุมสูงของบ้านอาปารีสอร์ท"
+                : "Aerial view of Baan APA Resort"
+            }
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0f2b26]/95 to-[#0f2b26]/45" />
+          <div className="relative mx-auto flex min-h-[calc(100vh-8rem)] max-w-7xl items-center px-5 pb-16">
             <div className="max-w-3xl">
               <p className="mb-4 text-sm font-semibold uppercase text-[#f2c36b]">
                 {t.hero.eyebrow}
@@ -48,7 +62,7 @@ export default function HomePage() {
         </section>
 
         <section className="bg-[#fbf7ef] px-5 py-20 text-[#17352f]">
-          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div>
               <p className="mb-3 text-sm font-bold text-[#b6782e]">
                 {t.about.eyebrow}
@@ -65,14 +79,14 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
-              {t.about.stats.map((item) => (
-                <div
-                  key={item}
-                  className="rounded-lg border border-[#e2d4bd] bg-white p-5 text-lg font-bold shadow-sm"
-                >
-                  {item}
-                </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {experienceImages.map((item) => (
+                <ResortImage
+                  key={item.src}
+                  src={item.src}
+                  alt={language === "th" ? item.altTh : item.altEn}
+                  className="h-72 shadow-lg"
+                />
               ))}
             </div>
           </div>
@@ -106,11 +120,10 @@ export default function HomePage() {
                     key={room.value}
                     className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] shadow-sm"
                   >
-                    <div
-                      className="h-64 w-full bg-cover bg-center"
-                      role="img"
-                      aria-label={translatedRoom.title}
-                      style={{ backgroundImage: `url(${room.image})` }}
+                    <ResortImage
+                      src={room.image}
+                      alt={translatedRoom.title}
+                      className="h-64 rounded-none"
                     />
                     <div className="p-6">
                       <p className="mb-2 text-sm font-bold text-[#b6782e]">
@@ -170,19 +183,18 @@ export default function HomePage() {
               </Link>
             </div>
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {galleryImages.map((item) => (
+              {galleryImages.slice(0, 8).map((item) => (
                 <figure
-                  key={item.key}
+                  key={item.src}
                   className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef]"
                 >
-                  <div
-                    className="h-72 w-full bg-cover bg-center"
-                    role="img"
-                    aria-label={t.gallery.items[item.key]}
-                    style={{ backgroundImage: `url(${item.src})` }}
+                  <ResortImage
+                    src={item.src}
+                    alt={language === "th" ? item.altTh : item.altEn}
+                    className="h-72 rounded-none"
                   />
                   <figcaption className="p-4 font-bold">
-                    {t.gallery.items[item.key]}
+                    {language === "th" ? item.altTh : item.altEn}
                   </figcaption>
                 </figure>
               ))}

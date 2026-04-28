@@ -2,11 +2,12 @@
 
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
-import { lineOaUrl } from "../_lib/site-content";
+import { contactImage, lineOaUrl } from "../_lib/site-content";
 import { useLanguage } from "../_components/LanguageProvider";
+import { ResortImage } from "../_components/ResortImage";
 
 export default function ContactPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -15,12 +16,26 @@ export default function ContactPage() {
           eyebrow={t.contact.eyebrow}
           title={t.contact.title}
           body={t.contact.body}
-          image="https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=80"
+          image={contactImage}
+          imageAlt={
+            language === "th"
+              ? "วิวสงบภายในบ้านอาปารีสอร์ท"
+              : "Calming resort view at Baan APA"
+          }
         />
 
         <section className="bg-white px-5 py-20 text-[#17352f]">
           <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
             <div className="rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] p-6 shadow-sm sm:p-8">
+              <ResortImage
+                src={contactImage}
+                alt={
+                  language === "th"
+                    ? "ภาพรีสอร์ทบรรยากาศสงบ"
+                    : "Calming resort image"
+                }
+                className="mb-6 h-72 shadow-md"
+              />
               <p className="mb-3 text-2xl font-bold">{t.brand}</p>
               <p className="mb-2 text-[#52635d]">{t.contact.location}</p>
               <p className="mb-6 text-[#52635d]">{t.contact.note}</p>

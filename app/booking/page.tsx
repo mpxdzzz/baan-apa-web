@@ -4,9 +4,10 @@ import { BookingForm } from "../_components/BookingForm";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
 import { useLanguage } from "../_components/LanguageProvider";
+import { bookingBannerImage } from "../_lib/site-content";
 
 export default function BookingPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -15,7 +16,12 @@ export default function BookingPage() {
           eyebrow={t.booking.eyebrow}
           title={t.booking.title}
           body={t.booking.body}
-          image="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1800&q=80"
+          image={bookingBannerImage}
+          imageAlt={
+            language === "th"
+              ? "บ้านพักสำหรับการจองบ้านอาปารีสอร์ท"
+              : "Resort house for booking at Baan APA"
+          }
         />
 
         <section className="bg-[#fbf7ef] px-5 py-20 text-[#17352f]">

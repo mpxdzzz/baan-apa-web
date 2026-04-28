@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
+import { ResortImage } from "../_components/ResortImage";
 import { roomOptions } from "../_lib/site-content";
 import { useLanguage } from "../_components/LanguageProvider";
 
 export default function RoomsPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -16,7 +17,12 @@ export default function RoomsPage() {
           eyebrow={t.rooms.eyebrow}
           title={t.rooms.title}
           body={t.rooms.intro}
-          image="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1800&q=80"
+          image="/images/room2.jpg"
+          imageAlt={
+            language === "th"
+              ? "ห้องพักบ้านอาปารีสอร์ท"
+              : "Guest room at Baan APA Resort"
+          }
         />
 
         <section className="bg-white px-5 py-20 text-[#17352f]">
@@ -29,11 +35,10 @@ export default function RoomsPage() {
                   key={room.value}
                   className="overflow-hidden rounded-lg border border-[#e2d4bd] bg-[#fbf7ef] shadow-sm"
                 >
-                  <div
-                    className="h-72 w-full bg-cover bg-center"
-                    role="img"
-                    aria-label={translatedRoom.title}
-                    style={{ backgroundImage: `url(${room.image})` }}
+                  <ResortImage
+                    src={room.image}
+                    alt={translatedRoom.title}
+                    className="h-72 rounded-none"
                   />
                   <div className="p-6 sm:p-8">
                     <p className="mb-2 text-sm font-bold text-[#b6782e]">

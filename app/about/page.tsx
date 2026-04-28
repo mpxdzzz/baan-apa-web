@@ -4,9 +4,11 @@ import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
 import { useLanguage } from "../_components/LanguageProvider";
+import { ResortImage } from "../_components/ResortImage";
+import { experienceImages } from "../_lib/site-content";
 
 export default function AboutPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
 
   return (
     <PublicLayout>
@@ -15,7 +17,12 @@ export default function AboutPage() {
           eyebrow={t.about.eyebrow}
           title={t.about.title}
           body={t.about.body}
-          image="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=80"
+          image="/images/garden.jpg"
+          imageAlt={
+            language === "th"
+              ? "สวนธรรมชาติภายในบ้านอาปารีสอร์ท"
+              : "Natural garden inside Baan APA Resort"
+          }
         />
 
         <section className="bg-[#fbf7ef] px-5 py-20 text-[#17352f]">
@@ -32,6 +39,16 @@ export default function AboutPage() {
             </div>
 
             <div className="rounded-lg border border-[#e2d4bd] bg-white p-6 shadow-sm sm:p-8">
+              <div className="mb-8 grid gap-4 sm:grid-cols-3">
+                {experienceImages.map((image) => (
+                  <ResortImage
+                    key={image.src}
+                    src={image.src}
+                    alt={language === "th" ? image.altTh : image.altEn}
+                    className="h-56 shadow-md"
+                  />
+                ))}
+              </div>
               <p className="mb-5 text-lg leading-8 text-[#52635d]">
                 {t.about.body}
               </p>
