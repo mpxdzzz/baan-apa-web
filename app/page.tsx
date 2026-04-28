@@ -5,7 +5,6 @@ import Link from "next/link";
 import { PublicLayout } from "./_components/PublicLayout";
 import { ResortImage } from "./_components/ResortImage";
 import {
-  experienceImages,
   galleryImages,
   heroImage,
   roomOptions,
@@ -79,14 +78,14 @@ export default function HomePage() {
               </Link>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
-              {experienceImages.map((item) => (
-                <ResortImage
-                  key={item.src}
-                  src={item.src}
-                  alt={language === "th" ? item.altTh : item.altEn}
-                  className="h-72 shadow-lg"
-                />
+            <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
+              {t.about.stats.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-lg border border-[#e2d4bd] bg-white p-5 text-lg font-bold shadow-sm"
+                >
+                  {item}
+                </div>
               ))}
             </div>
           </div>
