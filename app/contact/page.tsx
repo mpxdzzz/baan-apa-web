@@ -51,15 +51,17 @@ export default function ContactPage() {
 
             <div className="rounded-lg border border-[#e2d4bd] bg-[#17352f] p-6 text-white shadow-sm sm:p-8">
               <p className="mb-4 text-sm font-bold uppercase text-[#f2c36b]">
-                {t.booking.eyebrow}
+                LINE OA
               </p>
-              <h2 className="mb-4 text-3xl font-bold">{t.booking.title}</h2>
-              <p className="mb-6 leading-8 text-white/80">{t.booking.body}</p>
+              <h2 className="mb-4 text-3xl font-bold">{t.contact.title}</h2>
+              <p className="mb-6 leading-8 text-white/80">{t.contact.note}</p>
               <a
-                href="/booking"
-                className="inline-block rounded-md bg-[#f2c36b] px-5 py-3 font-bold text-[#17352f] hover:bg-[#ffd982]"
+                href={lineOaUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-block rounded-md bg-[#06c755] px-5 py-3 font-bold text-white hover:bg-[#05b34c]"
               >
-                {t.common.bookNow}
+                {t.contact.line}
               </a>
             </div>
           </div>

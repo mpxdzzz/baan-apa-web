@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
 import { useLanguage } from "../_components/LanguageProvider";
@@ -30,12 +29,6 @@ export default function FacilitiesPage() {
                 </div>
               ))}
             </div>
-            <Link
-              href="/booking"
-              className="mt-10 inline-block rounded-md bg-[#f2c36b] px-5 py-3 font-bold text-[#17352f] hover:bg-[#ffd982]"
-            >
-              {t.common.bookNow}
-            </Link>
           </div>
         </section>
       </main>

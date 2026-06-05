@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
-import { roomOptions } from "../_lib/site-content";
+import { lineOaUrl, roomOptions } from "../_lib/site-content";
 import { useLanguage } from "../_components/LanguageProvider";
 
 export default function RoomsPage() {
@@ -56,7 +56,9 @@ export default function RoomsPage() {
                   </div>
 
                   <Link
-                    href="/booking"
+                    href={lineOaUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     className="mt-7 inline-block rounded-md bg-[#17352f] px-5 py-3 text-center font-bold text-white hover:bg-[#25564c]"
                   >
                     {t.rooms.select}

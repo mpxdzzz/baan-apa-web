@@ -14,7 +14,6 @@ import { useLanguage } from "./_components/LanguageProvider";
 const homeCopy = {
   th: {
     heroSubtitle: "Nature Retreat in Kanchanaburi",
-    book: "จองห้องพัก",
     line: "Contact via LINE",
     badges: ["Nature Stay", "Family Friendly", "Near Erawan", "Private Retreat"],
     introEyebrow: "Baan APA Erawan Resort",
@@ -53,7 +52,7 @@ const homeCopy = {
     galleryTitle: "ภาพบรรยากาศแห่งการพักผ่อน",
     viewGallery: "ดูแกลเลอรี",
     ctaTitle: "พร้อมเริ่มต้นวันพักผ่อนที่บ้านอาปาแล้วหรือยัง",
-    ctaBody: "ส่งคำขอจอง หรือคุยกับทีมงานผ่าน LINE เพื่อเช็กห้องว่างและรายละเอียดก่อนเข้าพัก",
+    ctaBody: "คุยกับทีมงานผ่าน LINE เพื่อสอบถามห้องว่าง ราคา และรายละเอียดก่อนเข้าพัก",
     findEyebrow: "Find Us",
     findTitle: "BAAN APA ERAWAN",
     findDescription:
@@ -70,7 +69,6 @@ const homeCopy = {
   },
   en: {
     heroSubtitle: "Nature Retreat in Kanchanaburi",
-    book: "Book Now",
     line: "Contact via LINE",
     badges: ["Nature Stay", "Family Friendly", "Near Erawan", "Private Retreat"],
     introEyebrow: "Baan APA Erawan Resort",
@@ -109,7 +107,7 @@ const homeCopy = {
     galleryTitle: "A visual sense of rest",
     viewGallery: "View Gallery",
     ctaTitle: "Ready to begin your Baan APA retreat?",
-    ctaBody: "Send a booking request or talk with our team on LINE to check availability and stay details.",
+    ctaBody: "Talk with our team on LINE to check availability, rates, and stay details.",
     findEyebrow: "Find Us",
     findTitle: "BAAN APA ERAWAN",
     findDescription:
@@ -191,17 +189,11 @@ export default function HomePage() {
                 {copy.heroSubtitle}
               </p>
               <div className="mb-10 flex flex-col justify-center gap-3 sm:flex-row">
-                <Link
-                  href="/booking"
-                  className="rounded-md bg-[#f2c36b] px-8 py-4 font-bold text-[#17352f] shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#ffd982]"
-                >
-                  {copy.book}
-                </Link>
                 <a
                   href={lineOaUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="rounded-md border border-white/80 px-8 py-4 font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-white hover:text-[#17352f]"
+                  className="rounded-md bg-[#06c755] px-8 py-4 font-bold text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-[#05b34c]"
                 >
                   {copy.line}
                 </a>
@@ -324,7 +316,9 @@ export default function HomePage() {
                       ))}
                     </div>
                     <Link
-                      href="/booking"
+                      href={lineOaUrl}
+                      target="_blank"
+                      rel="noreferrer"
                       className="mt-7 inline-block rounded-md bg-[#17352f] px-5 py-3 text-center font-bold text-white hover:bg-[#25564c]"
                     >
                       {t.rooms.select}
@@ -420,17 +414,11 @@ export default function HomePage() {
                   {copy.ctaBody}
                 </p>
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                  <Link
-                    href="/booking"
-                    className="rounded-md bg-[#f2c36b] px-7 py-4 text-center font-bold text-[#17352f] transition hover:bg-[#ffd982]"
-                  >
-                    {copy.book}
-                  </Link>
                   <a
                     href={lineOaUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="rounded-md border border-white/70 px-7 py-4 text-center font-bold text-white transition hover:bg-white hover:text-[#17352f]"
+                    className="rounded-md bg-[#06c755] px-7 py-4 text-center font-bold text-white transition hover:bg-[#05b34c]"
                   >
                     {copy.line}
                   </a>

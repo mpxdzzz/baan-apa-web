@@ -5,7 +5,6 @@ export type NavKey =
   | "rooms"
   | "facilities"
   | "gallery"
-  | "booking"
   | "contact";
 
 export const lineOaUrl = "https://line.me/R/ti/p/@633bduwo";
@@ -16,7 +15,6 @@ export const navLinks: Array<{ key: NavKey; href: string }> = [
   { key: "rooms", href: "/rooms" },
   { key: "facilities", href: "/facilities" },
   { key: "gallery", href: "/gallery" },
-  { key: "booking", href: "/booking" },
   { key: "contact", href: "/contact" },
 ];
 
@@ -47,7 +45,7 @@ export const roomOptions = [
   },
   {
     value: "Boat House",
-    labels: ["Water Access", "For 2 Guests", "Boat Stay"],
+    labels: ["For 2 Guests", "Boat Stay", "Private Stay"],
   },
 ] as const;
 
@@ -398,13 +396,13 @@ export const content = {
       rooms: "ห้องพัก",
       facilities: "สิ่งอำนวยความสะดวก",
       gallery: "แกลเลอรี",
-      booking: "จองห้องพัก",
+      booking: "สอบถาม",
       contact: "ติดต่อ",
     },
     common: {
       line: "LINE OA",
       learnMore: "ดูรายละเอียด",
-      bookNow: "จองห้องพัก",
+      bookNow: "ติดต่อผ่าน LINE",
       viewRooms: "ดูห้องพัก",
       viewGallery: "ดูแกลเลอรี",
     },
@@ -412,7 +410,7 @@ export const content = {
       eyebrow: "Baan APA Resort",
       title: "บ้านอาปา รีสอร์ท",
       body: "ที่พักบรรยากาศสงบใกล้ธรรมชาติ เหมาะสำหรับครอบครัว กลุ่มเพื่อน และทริปพักผ่อนสบาย ๆ พร้อมสระว่ายน้ำ สวน ที่จอดรถ และบริการอบอุ่นเป็นกันเอง",
-      primary: "จองห้องพัก",
+      primary: "ติดต่อผ่าน LINE",
       secondary: "ดูห้องพัก",
     },
     about: {
@@ -469,8 +467,8 @@ export const content = {
         "Boat House": {
           type: "Boat Stay",
           title: "Boat House",
-          desc: "บ้านบนเรือ ให้ประสบการณ์นอนบนเรือที่สะดวกสบายครบครัน และสามารถเล่นน้ำได้ เหมาะสำหรับ 2 คน",
-          detail: "เหมาะสำหรับผู้ที่อยากได้ประสบการณ์พักบนเรือ พร้อมความสะดวกและกิจกรรมใกล้น้ำ",
+          desc: "บ้านบนเรือ ให้ประสบการณ์นอนบนเรือที่สะดวกสบายครบครัน เหมาะสำหรับ 2 คน",
+          detail: "เหมาะสำหรับผู้ที่อยากได้ประสบการณ์พักบนเรือ พร้อมความสะดวกและบรรยากาศใกล้น้ำ",
         },
       },
     },
@@ -495,10 +493,10 @@ export const content = {
         "รูปภาพบรรยากาศภายในบ้านอาปารีสอร์ท ถ่ายทอดความเรียบง่ายของธรรมชาติ ความสงบ และประสบการณ์การพักผ่อนที่แท้จริง",
     },
     booking: {
-      eyebrow: "Booking",
-      title: "จองห้องพัก",
-      body: "กรอกข้อมูลเพื่อให้ทีมงานติดต่อกลับและยืนยันการจอง",
-      name: "ชื่อผู้จอง",
+      eyebrow: "Inquiry",
+      title: "สอบถามห้องพัก",
+      body: "กรอกข้อมูลเพื่อให้ทีมงานติดต่อกลับและยืนยันรายละเอียดการเข้าพัก",
+      name: "ชื่อผู้ติดต่อ",
       namePlaceholder: "ชื่อ-นามสกุล",
       phone: "เบอร์โทร / LINE",
       phonePlaceholder: "เบอร์โทรหรือ LINE ID",
@@ -507,16 +505,16 @@ export const content = {
       guestsPlaceholder: "เช่น 2",
       roomType: "ประเภทห้องพัก",
       sending: "กำลังส่ง...",
-      submit: "ส่งคำขอจอง",
-      sendingStatus: "กำลังส่งคำขอจอง...",
-      success: "ส่งคำขอจองเรียบร้อยแล้ว ทีมงานจะติดต่อกลับโดยเร็ว",
+      submit: "ส่งคำขอสอบถาม",
+      sendingStatus: "กำลังส่งคำขอสอบถาม...",
+      success: "ส่งคำขอสอบถามเรียบร้อยแล้ว ทีมงานจะติดต่อกลับโดยเร็ว",
       lineWarning: "แต่ LINE ยังไม่ส่ง",
       error: "ส่งคำขอไม่สำเร็จ กรุณาลองใหม่อีกครั้ง หรือติดต่อทาง LINE OA",
     },
     contact: {
       eyebrow: "ติดต่อเรา",
       title: "สอบถามห้องว่างหรือรายละเอียดเพิ่มเติม",
-      body: "ติดต่อผ่าน LINE OA ได้สะดวกที่สุด หรือส่งคำขอจองผ่านแบบฟอร์ม ทีมงานจะติดต่อกลับเพื่อยืนยันรายละเอียด ราคา และการชำระเงิน",
+      body: "ติดต่อผ่าน LINE OA ได้สะดวกที่สุด ทีมงานจะช่วยตอบคำถามเรื่องห้องว่าง ราคา และรายละเอียดการเข้าพัก",
       location: "กาญจนบุรี ประเทศไทย",
       note: "เหมาะสำหรับครอบครัว กลุ่มเพื่อน และผู้ที่ต้องการพักผ่อนใกล้ธรรมชาติ",
       line: "ติดต่อผ่าน LINE OA",
@@ -530,13 +528,13 @@ export const content = {
       rooms: "Rooms",
       facilities: "Facilities",
       gallery: "Gallery",
-      booking: "Booking",
+      booking: "Inquiry",
       contact: "Contact",
     },
     common: {
       line: "LINE OA",
       learnMore: "Learn More",
-      bookNow: "Book Now",
+      bookNow: "Contact via LINE",
       viewRooms: "View Rooms",
       viewGallery: "View Gallery",
     },
@@ -544,7 +542,7 @@ export const content = {
       eyebrow: "Nature Stay in Kanchanaburi",
       title: "Baan APA Resort",
       body: "A peaceful nature resort for families, friends, and easy weekend escapes with a swimming pool, garden, free parking, and warm local hospitality.",
-      primary: "Book a Room",
+      primary: "Contact via LINE",
       secondary: "View Rooms",
     },
     about: {
@@ -601,8 +599,8 @@ export const content = {
         "Boat House": {
           type: "Boat Stay",
           title: "Boat House",
-          desc: "A comfortable boat house stay with full amenities and direct access to water activities, ideal for 2 guests.",
-          detail: "Ideal for guests looking for a memorable boat stay close to water activities.",
+          desc: "A comfortable boat house stay with full amenities, ideal for 2 guests.",
+          detail: "Ideal for guests looking for a memorable boat stay with comfort and a calm waterside atmosphere.",
         },
       },
     },
@@ -627,8 +625,8 @@ export const content = {
         "Photos from Baan APA Resort showcasing natural beauty, peaceful atmosphere, and authentic retreat experiences",
     },
     booking: {
-      eyebrow: "Booking",
-      title: "Book Your Stay",
+      eyebrow: "Inquiry",
+      title: "Ask About Rooms",
       body: "Send your details and our team will contact you to confirm availability.",
       name: "Guest Name",
       namePlaceholder: "Full name",
@@ -639,16 +637,16 @@ export const content = {
       guestsPlaceholder: "Example: 2",
       roomType: "Room Type",
       sending: "Sending...",
-      submit: "Send Booking Request",
-      sendingStatus: "Sending your booking request...",
-      success: "Booking request sent. Our team will contact you soon.",
+      submit: "Send Inquiry",
+      sendingStatus: "Sending your inquiry...",
+      success: "Inquiry sent. Our team will contact you soon.",
       lineWarning: "but LINE was not sent",
       error: "Something went wrong. Please try again or contact us via LINE OA.",
     },
     contact: {
       eyebrow: "Contact",
       title: "Ask about availability or more details",
-      body: "The easiest way to reach us is through LINE OA. You can also send a booking request through the form and our team will confirm details, pricing, and payment.",
+      body: "The easiest way to reach us is through LINE OA. Our team can confirm availability, pricing, and stay details with you directly.",
       location: "Kanchanaburi, Thailand",
       note: "Perfect for families, friend groups, and guests who want a relaxing stay close to nature.",
       line: "Contact via LINE OA",

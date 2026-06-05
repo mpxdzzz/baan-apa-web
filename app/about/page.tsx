@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { PageHeader } from "../_components/PageHeader";
 import { PublicLayout } from "../_components/PublicLayout";
 import { useLanguage } from "../_components/LanguageProvider";
@@ -45,12 +44,6 @@ export default function AboutPage() {
               <p className="text-lg leading-8 text-[#52635d]">
                 {t.about.extended}
               </p>
-              <Link
-                href="/booking"
-                className="mt-8 inline-block rounded-md bg-[#17352f] px-5 py-3 font-bold text-white hover:bg-[#25564c]"
-              >
-                {t.common.bookNow}
-              </Link>
             </div>
           </div>
         </section>

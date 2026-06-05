@@ -19,8 +19,8 @@ export default function BookingPage() {
           image={bookingBannerImage}
           imageAlt={
             language === "th"
-              ? "บ้านพักสำหรับการจองบ้านอาปารีสอร์ท"
-              : "Resort house for booking at Baan APA"
+              ? "บ้านพักสำหรับการเข้าพักที่บ้านอาปารีสอร์ท"
+              : "Resort house at Baan APA"
           }
         />
 

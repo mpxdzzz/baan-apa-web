@@ -5,7 +5,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "บ้านอาปา รีสอร์ท | Baan APA Resort",
   description:
-    "บ้านอาปา รีสอร์ท ที่พักบรรยากาศสงบใกล้ธรรมชาติ พร้อมสระว่ายน้ำ สวน ที่จอดรถ และระบบจองห้องพักออนไลน์",
+    "บ้านอาปา รีสอร์ท ที่พักบรรยากาศสงบใกล้ธรรมชาติ พร้อมสระว่ายน้ำ สวน ที่จอดรถ และช่องทางสอบถามผ่าน LINE",
 };
 
 export default function RootLayout({
