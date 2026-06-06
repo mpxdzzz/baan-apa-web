@@ -29,7 +29,7 @@ export const roomOptions = [
   },
   {
     value: "RH 1-10",
-    labels: ["Riverside View", "For 2 Guests", "Dining View"],
+    labels: ["Creekside View", "For 2 Guests", "Dining View"],
   },
   {
     value: "LN 1-2",
@@ -45,7 +45,7 @@ export const roomOptions = [
   },
   {
     value: "Boat House",
-    labels: ["For 2 Guests", "Boat Stay", "Private Stay"],
+    labels: ["For 2 Guests", "Creekside Raft", "Private Stay"],
   },
 ] as const;
 
@@ -441,10 +441,10 @@ export const content = {
           detail: "เหมาะสำหรับคู่รักหรือผู้เข้าพัก 2 คนที่ต้องการความเป็นส่วนตัวพร้อมวิวรีสอร์ท",
         },
         "RH 1-10": {
-          type: "Riverside View",
+          type: "Creekside View",
           title: "RH 1-10",
-          desc: "เหมาะสำหรับ 2 คน มีวิวริมน้ำที่สวยงาม และพื้นที่ด้านบนสำหรับรับประทานอาหารพร้อมชมวิวจากมุมสูง",
-          detail: "เหมาะกับการพักผ่อนริมน้ำ พร้อมมุมรับประทานอาหารและชมวิวในบรรยากาศสงบ",
+          desc: "เหมาะสำหรับ 2 คน มีวิวริมห้วยที่สวยงาม และพื้นที่ด้านบนสำหรับรับประทานอาหารพร้อมชมวิวจากมุมสูง",
+          detail: "เหมาะกับการพักผ่อนริมห้วย พร้อมมุมรับประทานอาหารและชมวิวในบรรยากาศสงบ",
         },
         "LN 1-2": {
           type: "Near Raft",
@@ -465,10 +465,10 @@ export const content = {
           detail: "เหมาะสำหรับกลุ่มที่ต้องการบ้านพักเป็นหลัง บรรยากาศสดใส และความเป็นส่วนตัว",
         },
         "Boat House": {
-          type: "Boat Stay",
+          type: "Creekside Raft Stay",
           title: "Boat House",
-          desc: "บ้านบนเรือ ให้ประสบการณ์นอนบนเรือที่สะดวกสบายครบครัน เหมาะสำหรับ 2 คน",
-          detail: "เหมาะสำหรับผู้ที่อยากได้ประสบการณ์พักบนเรือ พร้อมความสะดวกและบรรยากาศใกล้น้ำ",
+          desc: "แพพักริมห้วย ให้ประสบการณ์พักผ่อนที่สะดวกสบายครบครัน เหมาะสำหรับ 2 คน",
+          detail: "เหมาะสำหรับผู้ที่อยากได้ประสบการณ์พักบนแพริมห้วย พร้อมความสะดวกและบรรยากาศธรรมชาติ",
         },
       },
     },
@@ -573,10 +573,10 @@ export const content = {
           detail: "Ideal for couples or two guests who want privacy with resort views.",
         },
         "RH 1-10": {
-          type: "Riverside View",
+          type: "Creekside View",
           title: "RH 1-10",
-          desc: "Ideal for 2 guests, with beautiful riverside views and an upper area for dining while enjoying elevated scenery.",
-          detail: "Ideal for riverside stays with a scenic dining area and calm atmosphere.",
+          desc: "Ideal for 2 guests, with beautiful creekside views and an upper area for dining while enjoying elevated scenery.",
+          detail: "Ideal for creekside stays with a scenic dining area and calm atmosphere.",
         },
         "LN 1-2": {
           type: "Near Raft",
@@ -597,10 +597,10 @@ export const content = {
           detail: "Ideal for groups who want a colorful private house with generous space.",
         },
         "Boat House": {
-          type: "Boat Stay",
+          type: "Creekside Raft Stay",
           title: "Boat House",
-          desc: "A comfortable boat house stay with full amenities, ideal for 2 guests.",
-          detail: "Ideal for guests looking for a memorable boat stay with comfort and a calm waterside atmosphere.",
+          desc: "A comfortable creekside raft stay with full amenities, ideal for 2 guests.",
+          detail: "Ideal for guests looking for a memorable raft stay with comfort and a calm creekside atmosphere.",
         },
       },
     },
